@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Rajan Bhandari</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">  
+            <img src="./images/logo.png" class="logo-img" />
+        </a>
+            <span class="logo-text">Rajan Bhandari</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./aboutme.html" class="nav-link">About</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            <li><a href="./shop.html" class="nav-link">Shop</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2 class="about-rb">Contact Us</h2>
+    
+        <div class="cards">
+            <div class="card">
+                <h3>Email</h3>
+                <p>bhandarirajan10.rb@gmail.com</p>
+            </div>
+            <div class="card">
+                <h3>Phone</h3>
+                <p>+1 (647) 622-7593 </p>
+            </div>
+            <div class="card">
+                <h3>Social Media</h3>
+                <p>@imrajan</p>
+            </div>
+        </div>
+    <br>
+        <form action="submit_form.php" method="post">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" name="full-name" required>
+    
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+    
+            <label for="source">How Did You Know About Me?</label>
+            <select id="source" name="source" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="search_engine">Search Engine</option>
+                <option value="social_media">Social Media</option>
+                <option value="friend">Friend</option>
+                <option value="advertisement">Advertisement</option>
+                <option value="other">Other</option>
+            </select>
+    
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+    
+            <input type="submit" value="Submit">
+        </form>
+    
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0848235552364!2d144.96305771531626!3d-37.81410797975162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf0727f17f4fcae0!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1593577269623!5m2!1sen!2sus" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</body>
+
+</html>

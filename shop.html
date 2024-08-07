@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" class="logo-img" />
+            </a>
+            <span class="logo-text">Rajan Bhandari</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="./index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="./aboutme.html" class="nav-link">About</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            <li><a href="./shop.html" class="nav-link">Shop</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-content">
+        <section class="grid-container">
+            <section class="grid-item green-500">
+                <img src="./images/4.png" alt="Card" class="grid-img" onclick="openModal('./images/Absentnote.png')" />
+            </section>
+            <section class="grid-item blue-400">
+                <img src="./images/5.png" alt="Skip" class="grid-img" onclick="openModal('./images/ChaaBrothers.png')" />
+            </section>
+            <section class="grid-item purple-500">
+                <img src="./images/6.png" alt="La Floresta" class="grid-img" onclick="openModal('./images/SnapMeet.pnp')" />
+            </section>
+            <section class="grid-item yellow-500">
+                <img src="./images/7.jpeg" alt="Ones to Watch" class="grid-img" onclick="openModal('./images/7.jpeg')" />
+            </section>
+            <section class="grid-item yellow-400">
+                <img src="./images/8.jpeg" alt="Building" class="grid-img" onclick="openModal('./images/8.jpeg')" />
+            </section>
+            <section class="grid-item orange-500">
+                <img src="./images/9.jpeg" alt="Umbrella" class="grid-img" onclick="openModal('./images/9.jpeg')" />
+            </section>
+        </section>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        // Open the Modal
+        function openModal(src) {
+            document.getElementById("myModal").style.display = "block";
+            document.getElementById("img01").src = src;
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
