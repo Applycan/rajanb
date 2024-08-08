@@ -4,71 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Rajan Bhandari</title>
+    <title>Rajan Bhandari - About & Contact</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .navbar {
+            background: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo .logo-img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .navbar .logo .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar .nav-links li {
+            margin: 0 10px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        .font-bold {
+            font-weight: bold;
+        }
+
+        .mb-4 {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+
+        .contact-form {
+            margin-top: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background: #555;
+        }
+
+        .section-heading {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            font-size: 24px;
+        }
+    </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="logo">
             <a href="index.html">  
-            <img src="./images/logo.png" class="logo-img" />
-        </a>
+                <img src="./images/logo.png" class="logo-img" alt="Logo" />
+            </a>
             <span class="logo-text">Rajan Bhandari</span>
-           
         </div>
         <ul class="nav-links">
             <li><a href="./index.html" class="nav-link">Home</a></li>
-            <li><a href="./aboutme.html" class="nav-link">About</a></li>
-            <li><a href="./contact.html" class="nav-link">Contact</a></li>
-            <!-- <li><a href="./shop.html" class="nav-link">Shop</a></li> -->
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h2 class="about-rb"> Rajan Bhandari</h2>
-        <h3>Education</h3>
-        <div class="mb-4">
-            <p><span class="font-bold">Design For Web, Humber College, Canada</span><br>Jan 2024 - Aug 2025<br>Design effective visual communication for print, digital and new media platforms. Work on real-world projects. Network with industry professionals inside and outside the classroom. Work alongside creative peers and working designers.</p>
-        </div>
-        
-        <div class="mb-4">
-            <p><span class="font-bold">Management, Sheridan College, Canada</span><br>May 2023 - Dec 2024<br>Improve skills in analyzing marketing situations, identifying market opportunities, developing marketing strategies, making and defending these recommendations.</p>
-        </div>
-        
-        <div class="mb-4">
-            <p><span class="font-bold">Bachelor of Business Information System, APIC College, Australia</span><br>Sept 2019 - Dec 2022<br>Combines elements of business administration and computer science with a focus on information systems and technology. Equips students with skills to manage and utilize IT in business and IT industry.</p>
-        </div>
-        
-        <h3>Work Experience</h3>
-        <div class="mb-4">
-            <p><span class="font-bold">Marketing Manager, ApplyCan Inc, Canada</span><br>2022 - Present<br>ApplyCan facilitates an international admissions process into a convenient, secure, and automated solution.</p>
-            <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
-            <ul>
-                <li>Develop and execute comprehensive marketing strategies.</li>
-                <li>Analyze market trends and consumer insights.</li>
-                <li>Collaborate with cross-functional teams to create marketing campaigns.</li>
-                <li>Monitor and evaluate campaign performance.</li>
-                <li>Cultivate and maintain relationships with key stakeholders.</li>
-            </ul>
-        </div>
-        
-        <div class="mb-4">
-            <p><span class="font-bold">Web Designer and QA, Yelko Web Pty Ltd, Australia</span><br>Full time, 2021 - Present<br>Yelko Web Pty Ltd is an Australian IT company with operations in Nepal, providing IT services and a drag-and-drop website development platform.</p>
-            <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
-            <ul>
-                <li>Web system development and testing.</li>
-                <li>UI Design and optimization.</li>
-            </ul>
-        </div>
-        
-        <h3>Achievements</h3>
-        <div>
-            <p><span class="font-bold">Qualified Educational Agent Counsellor, QEAC - Q608.</span></p>
-            <p><span class="font-bold">Established ApplyCan since 2021.</span></p>
-        </div>
-    </div>
 
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-heading">About Rajan Bhandari</h2>
+            <h3>Education</h3>
+            <div class="mb-4">
+                <p><span class="font-bold">Design For Web, Humber College, Canada</span><br>Jan 2024 - Aug 2025<br>Design effective visual communication for print, digital, and new media platforms. Work on real-world projects. Network with industry professionals inside and outside the classroom. Work alongside creative peers and working designers.</p>
+            </div>
+            
+            <div class="mb-4">
+                <p><span class="font-bold">Management, Sheridan College, Canada</span><br>May 2023 - Dec 2024<br>Improve skills in analyzing marketing situations, identifying market opportunities, developing marketing strategies, making and defending these recommendations.</p>
+            </div>
+            
+            <div class="mb-4">
+                <p><span class="font-bold">Bachelor of Business Information System, APIC College, Australia</span><br>Sept 2019 - Dec 2022<br>Combines elements of business administration and computer science with a focus on information systems and technology. Equips students with skills to manage and utilize IT in business and IT industry.</p>
+            </div>
+            
+            <h3>Work Experience</h3>
+            <div class="mb-4">
+                <p><span class="font-bold">Marketing Manager, ApplyCan Inc, Canada</span><br>2022 - Present<br>ApplyCan facilitates an international admissions process into a convenient, secure, and automated solution.</p>
+                <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
+                <ul>
+                    <li>Develop and execute comprehensive marketing strategies.</li>
+                    <li>Analyze market trends and consumer insights.</li>
+                    <li>Collaborate with cross-functional teams to create marketing campaigns.</li>
+                    <li>Monitor and evaluate campaign performance.</li>
+                    <li>Cultivate and maintain relationships with key stakeholders.</li>
+                </ul>
+            </div>
+            
+            <div class="mb-4">
+                <p><span class="font-bold">Web Designer and QA, Yelko Web Pty Ltd, Australia</span><br>Full time, 2021 - Present<br>Yelko Web Pty Ltd is an Australian IT company with operations in Nepal, providing IT services and a drag-and-drop website development platform.</p>
+                <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
+                <ul>
+                    <li>Web system development and testing.</li>
+                    <li>UI Design and optimization.</li>
+                </ul>
+            </div>
+            
+            <h3>Achievements</h3>
+            <div>
+                <p><span class="font-bold">Qualified Educational Agent Counsellor, QEAC - Q608.</span></p>
+                <p><span class="font-bold">Established ApplyCan since 2021.</span></p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2 class="section-heading">Contact Rajan Bhandari</h2>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
 </body>
 
 </html>

@@ -71,7 +71,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: rgb(53, 18, 158);
-            font-size:28px;
+            font-size: 28px;
             text-align: center;
             display: none;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -79,6 +79,28 @@
 
         .grid-item:hover .hover-text {
             display: block;
+        }
+
+        .modal-description {
+            color: #f1f1f1;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #777;
         }
     </style>
 </head>
@@ -103,28 +125,28 @@
     <section class="main-content">
         <section class="grid-container">
             <section class="grid-item green-500">
-                <img src="./images/4.png" alt="Card" class="grid-img" onclick="openModal('./images/Absentnote.png')" />
+                <img src="./images/4.png" alt="Card" class="grid-img" onclick="openModal('./images/Absentnote.png', 'This is a description for Absent Note project.  ')" />
                 <div class="hover-text">Absent Note</div>
             </section>
             <section class="grid-item blue-400">
-                <img src="./images/5.png" alt="Skip" class="grid-img" onclick="openModal('./images/ChaaBrothers.png')" />
+                <img src="./images/5.png" alt="Skip" class="grid-img" onclick="openModal('./images/ChaaBrothers.png', 'This is a description for Chaa Brothers project.')" />
                 <div class="hover-text">Chaa Brothers</div>
             </section>
             <section class="grid-item purple-500">
-                <img src="./images/8.jpeg" alt="Poster" class="grid-img" onclick="openModal('./images/work1.png')" />
+                <img src="./images/8.jpeg" alt="Poster" class="grid-img" onclick="openModal('./images/work1.png', 'This is a description for Social Media Design project.')" />
                 <div class="hover-text">Social Media Design</div>
             </section>
             <section class="grid-item yellow-500">
-                <img src="./images/fizz.png" alt=" Can design" class="grid-img" onclick="openModal('./images/Mockup.png')" />
+                <img src="./images/fizz.png" alt="Can design" class="grid-img" onclick="openModal('./images/Mockup.png', 'This is a description for PopCan Design project.')" />
                 <div class="hover-text">PopCan Design</div>
             </section>
             <section class="grid-item yellow-400">
-                <img src="./images/7.jpeg" alt="Catelogue Design" class="grid-img" onclick="openModal('./images/Catelogue.png')" />
-                <div class="hover-text">Catelogue Design</div>
+                <img src="./images/7.jpeg" alt="Catalogue Design" class="grid-img" onclick="openModal('./images/Catelogue.png', 'This is a description for Catalogue Design project.')" />
+                <div class="hover-text">Catalogue Design</div>
             </section>
             <section class="grid-item orange-500">
-                <img src="./images/MenuThumb.png" alt="Menu of Restaurant" class="grid-img" onclick="openModal('./images/menu.png')" />
-                <div class="hover-text"> Restaurant Menu Design</div>
+                <img src="./images/MenuThumb.png" alt="Menu of Restaurant" class="grid-img" onclick="openModal('./images/menu.png', 'This is a description for Restaurant Menu Design project.')" />
+                <div class="hover-text">Restaurant Menu Design</div>
             </section>
         </section>
     </section>
@@ -133,13 +155,16 @@
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="img01">
+        <div class="modal-description" id="description"></div>
+        <button class="back-button" onclick="closeModal()">Back</button>
     </div>
 
     <script>
         // Open the Modal
-        function openModal(src) {
+        function openModal(src, description) {
             document.getElementById("myModal").style.display = "block";
             document.getElementById("img01").src = src;
+            document.getElementById("description").textContent = description;
         }
 
         // Close the Modal
