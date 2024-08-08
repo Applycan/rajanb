@@ -59,6 +59,27 @@
                 transform: scale(1)
             }
         }
+
+        .grid-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .grid-item .hover-text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(53, 18, 158);
+            font-size:28px;
+            text-align: center;
+            display: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .grid-item:hover .hover-text {
+            display: block;
+        }
     </style>
 </head>
 
@@ -83,26 +104,30 @@
         <section class="grid-container">
             <section class="grid-item green-500">
                 <img src="./images/4.png" alt="Card" class="grid-img" onclick="openModal('./images/Absentnote.png')" />
+                <div class="hover-text">Absent Note</div>
             </section>
             <section class="grid-item blue-400">
                 <img src="./images/5.png" alt="Skip" class="grid-img" onclick="openModal('./images/ChaaBrothers.png')" />
+                <div class="hover-text">Chaa Brothers</div>
             </section>
             <section class="grid-item purple-500">
-                <img src="./images/6.png" alt="La Floresta" class="grid-img" onclick="openModal('./images/work1.png')" />
+                <img src="./images/8.jpeg" alt="Poster" class="grid-img" onclick="openModal('./images/work1.png')" />
+                <div class="hover-text">Social Media Design</div>
             </section>
             <section class="grid-item yellow-500">
-                <img src="./images/fizz.png" alt="Ones to Watch" class="grid-img" onclick="openModal('./images/Mockup.png')" />
+                <img src="./images/fizz.png" alt=" Can design" class="grid-img" onclick="openModal('./images/Mockup.png')" />
+                <div class="hover-text">PopCan Design</div>
             </section>
             <section class="grid-item yellow-400">
-                <img src="./images/catelogueThumb.png" alt="Building" class="grid-img" onclick="openModal('./images/Catelogue.png')" />
+                <img src="./images/7.jpeg" alt="Catelogue Design" class="grid-img" onclick="openModal('./images/Catelogue.png')" />
+                <div class="hover-text">Catelogue Design</div>
             </section>
             <section class="grid-item orange-500">
-                <img src="./images/MenuThumb.png" alt="Umbrella" class="grid-img" onclick="openModal('./images/menu.png')" />
+                <img src="./images/MenuThumb.png" alt="Menu of Restaurant" class="grid-img" onclick="openModal('./images/menu.png')" />
+                <div class="hover-text"> Restaurant Menu Design</div>
             </section>
         </section>
     </section>
-
-    
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -126,7 +151,7 @@
     <p style="text-align: center;">
         To view the Fitness and Exercise Interactive online Manual publication, please click on this link. 
         <a href="https://indd.adobe.com/view/17bf415b-4455-4f5e-ad73-4716b038356a" target="_blank">Click Here</a>
-      </p>
+    </p>
 
 </body>
 
