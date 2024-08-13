@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajan's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-content {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        .grid-item {
+            position: relative;
+            display: inline-block;
+        }
+
+        .grid-item .hover-text {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(255, 255, 255);
+            font-size: 28px;
+            text-align: center;
+            display: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .grid-item:hover .hover-text {
+            display: block;
+        }
+
+        .modal-description {
+            color: #f1f1f1;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .back-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/logo.png" class="logo-img" />
+            </a>
+            <span class="logo-text">Rajan Bhandari</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Portfolio</a></li>
+
+            <li><a href="about.html" class="nav-link">About Me</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="container">
+            <!-- About Section -->
+            <section id="aboutme">
+                <h3>Education</h3>
+                <div class="mb-4">
+                    <p><span class="font-bold">Graphic Design For Web & Print, Humber College, Canada</span><br>Jan 2024
+                        -
+                        Aug 2025<br></p>
+                </div>
+
+                <div class="mb-4">
+                    <p><span class="font-bold">Marketing Management, Sheridan College, Canada</span><br>May 2023 - Dec
+                        2024<br>
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <p><span class="font-bold">Bachelor of Business Information System, APIC College,
+                            Australia</span><br>Sept
+                        2019 - Dec 2022<br></p>
+                </div>
+
+                <h3>Professional Experience</h3>
+                <div class="mb-4">
+                    <p><span class="font-bold">UI Designer, ApplyCan Pvt Ltd, Kathmandu</span><br>Part time, 2022 -
+                        Present<br>ApplyCan
+                        facilitates an international admissions process into a convenient, secure, and automated
+                        solution.
+                    </p>
+                    <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
+                    <ul>
+                        <li>UI Design:
+                            Designed intuitive and visually appealing user interfaces for web applications, enhancing
+                            user
+                            experience and engagement. Collaborated with developers to ensure seamless integration of UI
+                            designs
+                            into the final product.</li>
+                        <li>Prototyping: Created interactive prototypes using Figma, and Adobe XD to demonstrate design
+                            concepts
+                            and gather
+                            stakeholder feedback. Utilized prototyping tools to efficiently communicate design ideas and
+                            functionality.</li>
+                        <li>Visual Design:
+                            Developed visually appealing graphics and layouts for various projects, ensuring consistency
+                            with
+                            brand guidelines and design standards. Created icons, buttons, and other UI elements to
+                            enhance
+                            the
+                            overall user experience.</li>
+                        <li> UX/UI Design and optimization.</li>
+                    </ul>
+                </div> <br>
+
+                <div class="mb-4">
+                    <p><span class="font-bold"> Application Officer, Canadian Study Center Inc, ON</span><br>Full time,
+                        2021
+                        -
+                        May 2023<br>With the Mission & Vision of helping Nepalese Students achieve their dreams of Study
+                        in
+                        Canada from Nepal</p>
+                    <h4 class="font-bold mt-2">Major Job Responsibilities</h4>
+                    <li> Assist with program selection and application processing. </li>
+                    <li> Prepare and review visa documentation for students. </li>
+                    <li> Conduct pre-departure orientations for students. </li>
+                    <li> Maintain communication with students and educational institutions. </li>
+                    <li> Support scholarship applications and engage in outreach activities. </li>
+
+                    </ul>
+                </div>
+
+            </section>
+        </div>
+
+    </section>
+    <section class="contact-map-container">
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h3>Contact Me</h3>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+
+        <!-- Embedded Map -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.203644220565!2d-122.42305528467854!3d37.774929279758045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808cf5687f03%3A0x60e5e6a4535bb6e0!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1635368407953!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        style="background-color: rgb(99, 23, 23); color: white; padding: 20px 0; text-align: center; margin-top: 40px;">
+        <div class="footer-content">
+            <p>&copy; 2024 Rajan Bhandari. All rights reserved.</p>
+            <p>Follow me on:</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rajan-bhandari-34535517a/" target="_blank"
+                    style="color: white; margin: 0 10px;">
+                    <img src="./images/inst.jpeg" alt="LinkedIn" style="width: 24px;">
+                </a>
+                </a>
+                <a href="https://www.instagram.com/em_rajan_/" target="_blank" style="color: white; margin: 0 10px;">
+                    <img src="./images/insta.jpeg" alt="Instagram" style="width: 24px;">
+                </a>
+            </div>
+            <p>Phone: <a href="tel:+16476227593" style="color: #ffcc00;">+1 647 622 7593</a></p>
+            <p>Email: <a href="mailto:rajan@example.com" style="color: #ffcc00;">bhandarirajan10.rb@gmail.com</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
